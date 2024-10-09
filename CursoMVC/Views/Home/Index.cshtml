@@ -1,13 +1,33 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewData["Title"] = "Student Records Management";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
-
-<div class="row">
-    Hola mundo
+<div class="container">
+    <h1>Student Records</h1>
+    <hr/>
+    <button class="btn btn-primary" onclick="location.href='/Students/Create'">Add New Student</button>
+    <table class="table table-bordered table-striped mt-3">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Date of Birth</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @* Add a loop here to display student data when available *@
+            <tr>
+                <td>1</td>
+                <td>John</td>
+                <td>Doe</td>
+                <td>1990-01-01</td>
+                <td>
+                    <a href="/Students/Edit/1" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="/Students/Delete/1" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
